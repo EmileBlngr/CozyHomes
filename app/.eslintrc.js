@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['@react-native-community', 'prettier'],
+  extends: ['react-app/jest', 'prettier'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier'],
   overrides: [

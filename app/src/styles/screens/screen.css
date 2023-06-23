@@ -1,0 +1,49 @@
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/background_image.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+};
+
+.globalContainer {
+  flex: 1;
+};
+
+.containerHeader {
+    width: 100%;
+    height: 56;
+    display: flex;
+    flex-direction: row;
+  };
+
+.webContainer {
+  width: 70%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 15;
+  height: 80%;
+  max-height: 80%;
+  min-height: 80%
+}
+
+.webContainerConnexion {
+  width: 35%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 15;
+  height: 55%;
+};
+
+.screenScale {
+  max-width: 100%;
+  justify-content: flex-start;
+  margin-top: auto;
+  background-color: 'white';
+  margin: auto;
+};

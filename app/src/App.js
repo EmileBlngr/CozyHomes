@@ -1,11 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 import HomeLocations from './screens/HomeLocations.tsx';
+import Screen from './screens/screen.tsx'
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<HomeLocations/>} />
-        <Route path="/Home" element={<HomeLocations/>} />
+        <Route path="/" element={<Screen><HomeLocations/></Screen>} />
+        <Route path="/Home" element={<Screen><HomeLocations/></Screen>} />
       </Routes>
     </div>
   );
