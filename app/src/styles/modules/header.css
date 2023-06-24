@@ -1,7 +1,63 @@
 .containerHeader {
     background-color: white;
     width: 100%;
-    height: 56;
+    height: 7%;
     display: flex;
     flex-direction: row;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    }
+  
+header nav ul li {
+    display: inline;
+    white-space: nowrap;
+}
+  
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+  
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+li {
+    font-size: 1.3vmax;
+    padding: 1%;
+    padding-inline: 5%;
+    white-space: nowrap;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding-inline: 7%;
+    width: 100%;
+    background-color: red;
+}
+nav {
+    padding-inline: 7%;
+    padding-bottom: 1%;
+    padding: 1%;
+    width: 100%;
+}
+.imageProfil {
+    height: auto;
+    width: 2.5%;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+.logoHeader {
+    width: 11%;
+    height: auto;
+}
+
+.containerProfile {
+    align-items: center;
+    justify-content: center;
+    padding-left: 8%;
 }

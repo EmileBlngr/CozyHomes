@@ -10,7 +10,7 @@ interface ScreenProps {
 const Screen = ({children, route}: ScreenProps) => {
   return (
     <div className='globalContainer'>
-        <div>
+        <div className='containerHeader'>
             <Header />
         </div>
       <div className='backgroundImage' />
