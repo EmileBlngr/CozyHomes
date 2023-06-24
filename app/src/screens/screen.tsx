@@ -1,7 +1,6 @@
 import {ReactNode} from 'react';
 import React from 'react';
 import '../styles/screens/screen.css';
-import { backgroundImage } from '../assets/_export';
 import Header from '../modules/Header';
 
 interface ScreenProps {
@@ -14,8 +13,8 @@ const Screen = ({children, route}: ScreenProps) => {
         <div>
             <Header />
         </div>
-      <div className='backgroundImage'></div>
-        <div className={`screenScale webContainer`}>
+      <div className='backgroundImage' />
+        <div className='webContainer'>
           {children}
         </div>
         {/* <Footer /> */}
