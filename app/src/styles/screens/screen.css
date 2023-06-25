@@ -31,14 +31,15 @@ body {
   width: 70%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-block: 1%;
   border-radius: 15px;
-  height: 85%;
+  height: 75%;
   max-width: 100%;
   justify-content: flex-start;
   margin-top: auto;
   margin: auto;
   background-color: rgb(255, 255, 255);
-  flex: 4;
+  margin-top: 3%;
 }
 
 .webContainerConnexion {
@@ -52,8 +53,9 @@ body {
 @media (max-width: 768px) {
   .webContainer {
     /* Styles spécifiques à la version mobile */
-    width: 100%;
+    width: 90%;
     padding: 0%;
+    padding-inline: 5%;
     padding-top: 2%;
     border-radius: 0;
     height: auto;
