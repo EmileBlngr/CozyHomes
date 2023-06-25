@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import '../styles/modules/header.css';
 import { Link } from "react-router-dom";
 import { officialLogo, profileLogo } from "../assets/_export";
 
-
 function Header() {
+    const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    }
     return(
         <header>
             {/* <div>
                 <img src="logo.png" alt="Logo" />
             </div> */}
             <img src={officialLogo} alt="logoHeader" className="logoHeader"/>
-            <nav>
-                <ul>
+            <nav className={isMenuOpen ? "mobile-menu" : ""}>
+                <ul className={isMenuOpen ? "menu-open" : ""}>
                     <li>
                         <Link to="/">Trouver un logement</Link>
                     </li>
@@ -20,15 +24,19 @@ function Header() {
                         <Link to="/">Mes réservations</Link>
                     </li>
                   
-                    <li className="containerProfile">
-                        
+                    <li className="containerProfile">               
                         <Link to="/">
-                            <img src={profileLogo} alt="logoHeader" width={26} height={26} className="imageProfil"/>
-                            Mon profil
+                            <img src={profileLogo} alt="logoHeader" className="imageProfil"/>
+                            <span>Mon profil </span>     
                         </Link>                      
                     </li>
                 </ul>
             </nav>
+            <div className={`hamburger-menu ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </div>
         </header>
     );
 }

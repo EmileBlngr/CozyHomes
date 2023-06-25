@@ -48,3 +48,17 @@ body {
   border-radius: 15px;
   height: 55%;
 }
+
+@media (max-width: 768px) {
+  .webContainer {
+    /* Styles spécifiques à la version mobile */
+    width: 100%;
+    padding: 0%;
+    padding-top: 2%;
+    border-radius: 0;
+    height: auto;
+    justify-content: center;
+    margin-top: 0;
+    flex: 1;
+  }
+}
