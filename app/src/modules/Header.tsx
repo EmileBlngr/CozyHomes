@@ -26,11 +26,10 @@ function Header() {
                   
                     <li className="containerProfile">               
                         <Link to="/">
-                            {!isMenuOpen && (
+                            {!isMenuOpen ? (
                                 <img src={profileLogo} alt="logoHeader" className="imageProfil"/>
-                            )}
-                            
-                            <span>Mon profil</span>   
+                            ) : (<span>Mon profil</span>
+                            )}   
                         </Link>                      
                     </li>
                 </ul>
