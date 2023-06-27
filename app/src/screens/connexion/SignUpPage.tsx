@@ -3,7 +3,9 @@ import React from "react";
 function SignUpPage() {
 
     return(
-        <div></div>
+        <div>
+            <h1></h1>
+        </div>
     )
 }
 export default SignUpPage;

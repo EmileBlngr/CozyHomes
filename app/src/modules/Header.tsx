@@ -11,9 +11,6 @@ function Header() {
     }
     return(
         <header>
-            {/* <div>
-                <img src="logo.png" alt="Logo" />
-            </div> */}
             <img src={officialLogo} alt="logoHeader" className="logoHeader"/>
             <nav className={isMenuOpen ? "mobile-menu" : ""}>
                 <ul className={isMenuOpen ? "menu-open" : ""}>

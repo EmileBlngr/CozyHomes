@@ -28,7 +28,7 @@ header nav ul li a:hover {
 li {
     width: 20%;
     position: relative;
-    font-size: 1.3vmax;
+    font-size: 1.1vmax;
     padding: 1%;
     padding-inline: 5%;
     white-space: nowrap;
@@ -66,7 +66,7 @@ nav {
 }
 
 .logoHeader {
-    width: 14%;
+    width: 12%;
     height: auto;
 }
 

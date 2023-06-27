@@ -30,10 +30,10 @@ function App() {
   return (
     <div className='AppContainer'>
       <Routes>
-        <Route path="/" element={<Screen><HomeLocations/></Screen>} />
-        <Route path="/home" element={<Screen><HomeLocations/></Screen>} />
-        <Route path="/sign-in" element={<Screen><SignInPage/></Screen>} />
-        <Route path="/sign-up" element={<Screen><SignUpPage/></Screen>} />
+        <Route path="/" element={<Screen route="sign-in"><SignInPage/></Screen>} />
+        <Route path="/home" element={<Screen route="home"><HomeLocations/></Screen>} />
+        <Route path="/sign-in" element={<Screen route="sign-in"><SignInPage/></Screen>} />
+        <Route path="/sign-up" element={<Screen route="sign-up"><SignUpPage/></Screen>} />
       </Routes>
     </div>
   );

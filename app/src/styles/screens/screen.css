@@ -38,16 +38,22 @@ body {
   justify-content: flex-start;
   margin-top: auto;
   margin: auto;
-  background-color: rgb(255, 255, 255);
+  color: rgb(30, 56, 133) ;
   margin-top: 3%;
 }
 
 .webContainerConnexion {
-  width: 35%;
+  width: 28%;
   padding-left: 3%;
   padding-right: 3%;
-  border-radius: 15px;
-  height: 55%;
+  padding-block: 1%;
+  border-radius: 8px;
+  height: 60%;
+  max-width: 100%;
+  justify-content: flex-start;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 6%;
 }
 
 @media (max-width: 768px) {
@@ -62,5 +68,14 @@ body {
     justify-content: center;
     margin-top: 0;
     flex: 1;
+  }
+  .webContainerConnexion {
+    width: 90%;
+    padding-inline: 5%;
+    border-radius: 0;
+    height: auto;
+    justify-content: center;
+    margin-top: 0;
+    margin: auto;
   }
 }
