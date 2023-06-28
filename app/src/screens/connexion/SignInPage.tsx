@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import '../../styles/screens/connexion/SignInPage.css'
+import { eyeOpenIcon, eyeSlashIcon } from "../../assets/_export";
 function SignInPage() {
     const [email, setEmail] = useState<string>(''); 
     const [password, setPassword] = useState<string>(''); 
     const [inputEmailFocused, setInputEmailFocused] = useState(false);
     const [inputPasswordFocused, setInputPasswordFocused] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -23,7 +25,6 @@ function SignInPage() {
                 setInputPasswordFocused(false)
             }
         }
-      
     }; 
     const handleFocus = (inputName: string) => {
         if (inputName === 'email') {
@@ -49,13 +50,24 @@ function SignInPage() {
                 </div>
                 <div className={`inputContainer ${inputPasswordFocused ? "focused" : ""}`}>
                     <label>Mot de passe</label>
-                    <input 
-                        type="text" 
-                        value={password} 
-                        required={true} 
-                        onFocus={() => handleFocus('password')}
-                        onBlur={() => handleBlur('password')} 
-                        onChange={((e) => handleChangePassword(e))}></input>
+                    <div className={"containerPasswordInput"}>
+                        <input 
+                            type={showPassword ? "text" : "password"}
+                            value={password} 
+                            required={true} 
+                            onFocus={() => handleFocus('password')}
+                            onBlur={() => handleBlur('password')} 
+                            onChange={((e) => handleChangePassword(e))}>
+                        </input>
+                        {inputPasswordFocused && (
+                            <img 
+                                src={showPassword ? eyeOpenIcon : eyeSlashIcon} 
+                                alt="PasswordShown" 
+                                className="passwordEyeImage"
+                                onClick={() => setShowPassword(!showPassword)} />
+                        )}
+                    </div>
+                    
                 </div>
                 <div className="buttonContainer">
                     <input 

@@ -15,7 +15,7 @@ function Header() {
             <nav className={isMenuOpen ? "mobile-menu" : ""}>
                 <ul className={isMenuOpen ? "menu-open" : ""}>
                     <li>
-                        <Link to="/">Trouver un logement</Link>
+                        <Link to="/home">Trouver un logement</Link>
                     </li>
                     <li>
                         <Link to="/">Mes réservations</Link>

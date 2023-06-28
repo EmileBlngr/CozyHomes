@@ -10,11 +10,6 @@
     color: rgb(30, 56, 133);
 }
 
-.logo {
-    width: 40%;
-    height: auto;
-    opacity: 0.8;
-}
 form {
     display: flex;
     flex-direction: column;
@@ -46,6 +41,7 @@ form {
     padding-block: 4%;
     font-weight: bold;
     border: none;
+    border-radius: 5px;
     background-color: rgb(30, 56, 133, 0.7);
     font-size: 1.2vmax;
     color: rgb(255, 255, 255, 0.9);
@@ -84,4 +80,17 @@ form {
     border-bottom: 1px solid black;
     margin-top: 2%;
     padding-block: 3%;
+}
+.containerPasswordInput {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.passwordEyeImage {
+    width: 10%;
+    height: auto;   
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+    padding: 1%;
 }
