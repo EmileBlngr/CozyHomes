@@ -14,7 +14,7 @@ const Screen = ({children, route}: ScreenProps) => {
             <Header />
         </div>
       <div className='backgroundImage' />
-        <div className={(route === 'sign-in' || route === 'sign-up') 
+        <div className={(route === 'connexion' || route === 'inscription') 
         ? 'webContainerConnexion' 
         : 'webContainer'}>
           {children}

@@ -2,12 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: rgb(30, 56, 133) ;
 }
 .connexionTitle {
-    margin-top: 15%;
-    font-size: 2.1vmax;
-    text-align: center;
-    color: rgb(30, 56, 133);
+    margin-top: 10%;
 }
 
 form {
@@ -16,7 +14,6 @@ form {
     align-items: center;
     padding-inline: 10%;
     padding-top: 5%;
-    color: rgb(30, 56, 133) ;
     width: 80%;
 }
 .inputContainer label {
@@ -24,9 +21,13 @@ form {
 	top:15%;
 	left:6%;
 	transition: all 0.5s ease-in-out;
-    font-size: 1.2vmax;
     padding-block: 3%;
-    font-weight: 600;
+}
+.labelObligatoire {
+    color: rgb(217, 24, 24)
+}
+.labelText {
+    margin-left: 4%;
 }
 .buttonContainer {
     display: flex;
@@ -34,7 +35,7 @@ form {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 .submitButton {
     width: 90%;
@@ -47,14 +48,6 @@ form {
     color: rgb(255, 255, 255, 0.9);
 }
 
-
-.submitButton:hover {
-    background-color: rgb(30, 56, 133, 0.9);
-}
-.submitButton:active {
-    background-color: rgb(30, 56, 133, 0.5);
-    transition: 0.2s;
-}
 .inputContainer {
     padding-block: 2%;
     margin-bottom: 5%;
@@ -87,10 +80,25 @@ form {
     position: relative;
 }
 .passwordEyeImage {
-    width: 10%;
+    width: 8%;
     height: auto;   
     position: absolute;
     right: 2%;
     bottom: 15%;
     padding: 1%;
 }
+.createAccountContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.createAccountContainer p{
+    margin-bottom: 0%;
+}
+.createAccountButton {
+    text-decoration: none;
+    font-weight: 700;
+    color: rgb(30, 56, 133);
+    text-align: right;
+}
+

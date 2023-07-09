@@ -49,14 +49,42 @@ body {
   padding-right: 3%;
   padding-block: 1%;
   border-radius: 8px;
-  height: 60%;
+  height: 70%;
   max-width: 100%;
   justify-content: flex-start;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.7);
-  margin-top: 6%;
+  margin-top: 4%;
 }
 
+/* GlobalStyles */
+/* Bouton survol souris */
+button:hover, input[type='button']:hover, a:hover {
+  opacity: 0.7;
+}
+/* Bouton au click */
+button:active, input[type='button']:active, a:active {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+/* Titre 1 */
+ h1 { 
+  font-size: 2.1vmax;
+  text-align: center;
+  color: rgb(30, 56, 133);
+}
+/* Labels de formulaire */
+label {
+  font-size: 1.05vmax;
+  font-weight: 600;
+}
+/* erreur de formulaire */
+.globalFormError {
+  font-size: 0.9vmax;
+  color: rgb(217, 24, 24)
+
+
+}
 @media (max-width: 768px) {
   .webContainer {
     /* Styles spécifiques à la version mobile */

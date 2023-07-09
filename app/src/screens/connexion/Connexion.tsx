@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import '../../styles/screens/connexion/SignInPage.css'
+import '../../styles/screens/connexion/Connexion.css'
 import { eyeOpenIcon, eyeSlashIcon } from "../../assets/_export";
-function SignInPage() {
+import { Link } from "react-router-dom";
+import { messageErreurEmail, messageErreurPassword } from "../../factories/ConnexionFactories";
+function Connexion() {
     const [email, setEmail] = useState<string>(''); 
     const [password, setPassword] = useState<string>(''); 
     const [inputEmailFocused, setInputEmailFocused] = useState(false);
     const [inputPasswordFocused, setInputPasswordFocused] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-
     const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     };
@@ -34,12 +35,15 @@ function SignInPage() {
             setInputPasswordFocused(true)
         }
     };
+    //Schéma de validation des erreurs de formulaire
+
     return(
         <div className="connexionContainer">
             <h1 className="connexionTitle">Connectez-vous</h1>
             <form>
                 <div className={`inputContainer ${inputEmailFocused ? "focused" : ""}`}>
-                    <label>Adresse email</label>
+                    <label className="labelObligatoire">*</label>
+                    <label className="labelText">Adresse email</label>
                     <input 
                         type="email" 
                         value={email} 
@@ -47,9 +51,11 @@ function SignInPage() {
                         onFocus={() => handleFocus('email')}
                         onBlur={() => handleBlur('email')} 
                         onChange={((e) => handleChangeEmail(e))}></input>
+                    <span className="globalFormError">{messageErreurEmail(inputEmailFocused, email)}</span>
                 </div>
                 <div className={`inputContainer ${inputPasswordFocused ? "focused" : ""}`}>
-                    <label>Mot de passe</label>
+                    <label className="labelObligatoire">*</label>
+                    <label className="labelText">Mot de passe</label>
                     <div className={"containerPasswordInput"}>
                         <input 
                             type={showPassword ? "text" : "password"}
@@ -67,6 +73,9 @@ function SignInPage() {
                                 onClick={() => setShowPassword(!showPassword)} />
                         )}
                     </div>
+                    <span className="globalFormError">
+                        {messageErreurPassword(inputPasswordFocused, password)}
+                    </span>
                     
                 </div>
                 <div className="buttonContainer">
@@ -75,9 +84,16 @@ function SignInPage() {
                         className="submitButton" 
                         value="Se connecter"/>
                 </div>
+                
 
             </form>
+            <div className="createAccountContainer">
+                <p>
+                    Vous n'avez pas encore de compte ?
+                </p>
+                <Link to="/inscription" className="createAccountButton">Créez-en un !</Link>
+            </div>
         </div>
     )
 }
-export default SignInPage;
+export default Connexion;
