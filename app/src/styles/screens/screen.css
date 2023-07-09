@@ -81,7 +81,8 @@ label {
 /* erreur de formulaire */
 .globalFormError {
   font-size: 0.9vmax;
-  color: rgb(217, 24, 24)
+  color: rgb(217, 24, 24);
+  font-weight: 600;
 
 
 }

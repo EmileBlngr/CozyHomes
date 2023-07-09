@@ -1,18 +1,24 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import '../../styles/screens/connexion/Connexion.css'
 import { eyeOpenIcon, eyeSlashIcon } from "../../assets/_export";
 import { Link } from "react-router-dom";
 import { messageErreurEmail, messageErreurPassword } from "../../factories/ConnexionFactories";
+import { Regex } from "../../constants/Regex";
+import { PostConnexion } from "../../services/serviceConnexion";
 function Connexion() {
     const [email, setEmail] = useState<string>(''); 
     const [password, setPassword] = useState<string>(''); 
     const [inputEmailFocused, setInputEmailFocused] = useState(false);
     const [inputPasswordFocused, setInputPasswordFocused] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const [codeErreur, setCodeErreur] = useState<string>('')
     const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCodeErreur('');
         setEmail(e.target.value);
     };
     const handleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setCodeErreur('');
         setPassword(e.target.value);
     };
     const handleBlur = (inputName: string) => {
@@ -35,8 +41,32 @@ function Connexion() {
             setInputPasswordFocused(true)
         }
     };
-    //Schéma de validation des erreurs de formulaire
-
+    const useNavigation = () => {
+        const navigate = useNavigate();
+      
+        const navigateTo = (path: string) => {
+          navigate(path);
+        };
+      
+        return navigateTo;
+      };
+    const navigateTo = useNavigation();
+    const handleSubmit = () => {
+        if (Regex[0].email.test(email) && Regex[0].password.test(password)) {
+            PostConnexion(email, password)
+            .then((response) => {
+                if (response === '200') {
+                    navigateTo('/home');
+                }
+                else if (response === '404') {
+                    setCodeErreur("Vos identifiants sont incorrects. Veuillez réessayer.")
+                } 
+              })
+              .catch((error) => {
+                console.error(error);
+              });
+        }
+    }
     return(
         <div className="connexionContainer">
             <h1 className="connexionTitle">Connectez-vous</h1>
@@ -82,8 +112,12 @@ function Connexion() {
                     <input 
                         type="button" 
                         className="submitButton" 
-                        value="Se connecter"/>
+                        value="Se connecter"
+                        onClick={handleSubmit}/>
                 </div>
+                <span className="globalFormError">
+                    {Regex[0].email.test(email) && Regex[0].password.test(password) ? codeErreur : ''}
+                </span>
                 
 
             </form>

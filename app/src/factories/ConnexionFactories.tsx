@@ -1,5 +1,6 @@
 import { Regex } from "../constants/Regex";
 
+//Schéma de validation des erreurs de formulaire
 export const messageErreurEmail = (inputEmailFocused: boolean, email: string) => {
     if (inputEmailFocused) {
        if (email === '') {
