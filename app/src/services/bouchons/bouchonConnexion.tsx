@@ -4,8 +4,15 @@ export const AllBouchonConnexion = [
 ];
 
 export const BouchonConnexion = (email: string, password: string) => {
-    const match = AllBouchonConnexion.find(
+    return(!!AllBouchonConnexion.find(
       (item) => item.email === email && item.password === password
-    );
-    return !!match; // Renvoie true si une correspondance est trouvée, sinon false
+    ))
+   // Renvoie true si une correspondance est trouvée, sinon false
   };
+
+  export const BouchonInscription = (email: string, password?: string) => {
+      return(!!AllBouchonConnexion.find(
+        (item) => item.email === email
+      ))
+     // Renvoie true si une correspondance est trouvée, sinon false
+    };

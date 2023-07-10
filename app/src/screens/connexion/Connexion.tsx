@@ -13,6 +13,7 @@ function Connexion() {
     const [inputPasswordFocused, setInputPasswordFocused] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [codeErreur, setCodeErreur] = useState<string>('')
+    console.log(email, password);
     const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCodeErreur('');
         setEmail(e.target.value);
@@ -66,24 +67,24 @@ function Connexion() {
                 console.error(error);
               });
         }
-    }
+    };
     return(
         <div className="connexionContainer">
             <h1 className="connexionTitle">Connectez-vous</h1>
             <form>
-                <div className={`inputContainer ${inputEmailFocused ? "focused" : ""}`}>
+                <div className={`inputContainer ${inputEmailFocused || email !== '' ? "focused" : ""}`}>
                     <label className="labelObligatoire">*</label>
                     <label className="labelText">Adresse email</label>
                     <input 
                         type="email" 
-                        value={email} 
+                        value={email}
                         required={true}           
                         onFocus={() => handleFocus('email')}
                         onBlur={() => handleBlur('email')} 
                         onChange={((e) => handleChangeEmail(e))}></input>
                     <span className="globalFormError">{messageErreurEmail(inputEmailFocused, email)}</span>
                 </div>
-                <div className={`inputContainer ${inputPasswordFocused ? "focused" : ""}`}>
+                <div className={`inputContainer ${inputPasswordFocused || password !== '' ? "focused" : ""}`}>
                     <label className="labelObligatoire">*</label>
                     <label className="labelText">Mot de passe</label>
                     <div className={"containerPasswordInput"}>
@@ -116,7 +117,7 @@ function Connexion() {
                         onClick={handleSubmit}/>
                 </div>
                 <span className="globalFormError">
-                    {Regex[0].email.test(email) && Regex[0].password.test(password) ? codeErreur : ''}
+                    {codeErreur}
                 </span>
                 
 
