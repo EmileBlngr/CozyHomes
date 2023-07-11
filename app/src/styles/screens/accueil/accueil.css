@@ -1,0 +1,22 @@
+.container-global {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container-top {
+    flex: 1;
+    justify-content: space-between;
+}
+.container-center {
+    flex: 3;
+}
+.container-top form {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+}
+.search-bar-lieu, .search-bar-hebergement {
+    flex: 1;
+    padding-block: 10px;
+}

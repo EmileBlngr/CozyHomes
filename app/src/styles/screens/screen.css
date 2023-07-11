@@ -28,19 +28,19 @@ body {
   }
 
 .webContainer {
-  width: 70%;
+  width: 85%;
+  height: 77%;
   padding-left: 5%;
   padding-right: 5%;
-  padding-block: 1%;
+  padding-top: 0.5%;
+  padding-bottom: 3%;
   border-radius: 15px;
-  height: 75%;
   max-width: 100%;
   justify-content: flex-start;
-  margin-top: auto;
   margin: auto;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.92);
   color: rgb(30, 56, 133) ;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .webContainerConnexion {

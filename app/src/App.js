@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation} from 'react-router-dom';
 
-import HomeLocations from './screens/accueil/HomeLocations.tsx';
+import Accueil from './screens/accueil/Accueil.tsx';
 import Connexion from './screens/connexion/Connexion.tsx';
 import Inscription from './screens/connexion/Inscription.tsx';
 import Screen from './screens/screen.tsx'
@@ -33,7 +33,7 @@ function App() {
     <div className='AppContainer'>
       <Routes>
         <Route path="/" element={<Screen route="connexion"><Connexion/></Screen>} />
-        <Route path="/home" element={<Screen route="home"><HomeLocations/></Screen>} />
+        <Route path="/home" element={<Screen route="home"><Accueil/></Screen>} />
         <Route path="/connexion" element={<Screen route="connexion"><Connexion/></Screen>} />
         <Route path="/inscription" element={<Screen route="inscription"><Inscription/></Screen>} />
       </Routes>
