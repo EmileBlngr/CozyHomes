@@ -1,4 +1,6 @@
-export const AllBouchonConnexion = [
+import IUtilisateur from "../../interfaces/IUtilisateur";
+
+export const AllBouchonConnexion: IUtilisateur[] = [
     {email: 'e.b@gmail.com', password: 'frfrance9'},
     {email: 'emile.boulanger@gmail.com', password: 'frfrance9'},
 ];

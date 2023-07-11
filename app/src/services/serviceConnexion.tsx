@@ -5,10 +5,10 @@ const Bouchon = true;
 export const PostConnexion = async (email: string, password: string) => {
     if (Bouchon) {
       if (BouchonConnexion(email, password)) {
-        return Promise.resolve('200');
+        return Promise.resolve(200);
       }
       else {
-        return Promise.resolve('404');
+        return Promise.resolve(404);
       }
     }
 }
@@ -16,10 +16,10 @@ export const PostConnexion = async (email: string, password: string) => {
 export const PostInscription = async (email: string, password: string) => {
   if (Bouchon) {
     if (BouchonInscription(email, password)) {
-      return Promise.resolve('409');
+      return Promise.resolve(409);
     }
     else {
-      return Promise.resolve('201');
+      return Promise.resolve(201);
     }
   }
 }
