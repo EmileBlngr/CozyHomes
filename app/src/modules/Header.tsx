@@ -9,20 +9,23 @@ function Header() {
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     }
+    const closeMenu = () => {
+        setMenuOpen(false);
+    }
     return(
         <header>
             <img src={officialLogo} alt="logoHeader" className="logoHeader"/>
             <nav className={isMenuOpen ? "mobile-menu" : ""}>
                 <ul className={isMenuOpen ? "menu-open" : ""}>
                     <li>
-                        <Link to="/home">Trouver un logement</Link>
+                        <Link to="/home" onClick={closeMenu}>Trouver un logement</Link>
                     </li>
                     <li>
-                        <Link to="/">Mes réservations</Link>
+                        <Link to="/" onClick={closeMenu}>Mes réservations</Link>
                     </li>
                   
                     <li className="containerProfile">               
-                        <Link to="/">
+                        <Link to="/" onClick={closeMenu}>
                             {!isMenuOpen ? (
                                 <img src={profileLogo} alt="logoHeader" className="imageProfil"/>
                             ) : (<span>Mon profil</span>

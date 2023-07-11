@@ -69,18 +69,18 @@ button:active, input[type='button']:active, a:active {
 }
 /* Titre 1 */
  h1 { 
-  font-size: 2.1vmax;
+  font-size: 2em;
   text-align: center;
   color: rgb(30, 56, 133);
 }
 /* Labels de formulaire */
 label {
-  font-size: 1.05vmax;
+  font-size: 1.05em;
   font-weight: 600;
 }
 /* erreur de formulaire */
 .globalFormError {
-  font-size: 0.9vmax;
+  font-size: 0.8em;
   color: rgb(217, 24, 24);
   font-weight: 600;
 
@@ -94,18 +94,17 @@ label {
     padding-inline: 5%;
     padding-top: 2%;
     border-radius: 0;
-    height: auto;
+    height: 100%;
     justify-content: center;
     margin-top: 0;
     flex: 1;
   }
   .webContainerConnexion {
     width: 90%;
+    height: 100%;
     padding-inline: 5%;
     border-radius: 0;
-    height: auto;
     justify-content: center;
     margin-top: 0;
-    margin: auto;
   }
 }

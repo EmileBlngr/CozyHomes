@@ -44,7 +44,7 @@ form {
     border: none;
     border-radius: 5px;
     background-color: rgb(30, 56, 133, 0.7);
-    font-size: 1.2vmax;
+    font-size: 1.2em;
     color: rgb(255, 255, 255, 0.9);
 }
 
@@ -64,7 +64,7 @@ form {
     left: -3%;
   }
 .inputContainer input {
-    font-size: 1vmax;
+    font-size: 0.9em;
     color: rgb(30, 56, 133);
     padding: 2%;
     width: 95%;
