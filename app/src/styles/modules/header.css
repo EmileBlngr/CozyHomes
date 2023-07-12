@@ -58,8 +58,8 @@ nav {
     width: 100%;
 }
 .imageProfil {
-    height: auto;
-    width: 6.5%;
+    height: 40px;
+    width: 40px;
     position: absolute;
     transform: translate(0, -50%);
     top: 50%;

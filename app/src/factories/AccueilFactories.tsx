@@ -16,6 +16,14 @@ export const handleChangeHebergement =
     ) => {
         setHebergement(e.target.value);
     };
+    export const handleChangePersonnes = 
+    (
+        e: React.ChangeEvent<HTMLInputElement>, 
+        setPersonnes: React.Dispatch<React.SetStateAction<number>>,
+    ) => {
+        const value = parseInt(e.target.value, 10);
+        setPersonnes(value);
+    };
 //Schéma de validation des erreurs de formulaire
 export const messageErreurEmail = (inputEmailFocused: boolean, email: string) => {
     if (inputEmailFocused) {

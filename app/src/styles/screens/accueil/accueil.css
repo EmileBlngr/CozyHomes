@@ -10,13 +10,74 @@
 }
 .container-center {
     flex: 3;
+    margin-top: 2%;
+    overflow-y: scroll;
 }
+.container-sejour {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 2%;
+  }
+
 .container-top form {
+    width: 100%;
+    padding-inline: 0;
     display: flex;
     flex-direction: row;
     padding-top: 0;
 }
-.search-bar-lieu, .search-bar-hebergement {
-    flex: 1;
-    padding-block: 10px;
+.input-container-lieu, .input-container-hebergement, .input-container-personnes, .container-button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-inline: 1%;
+    border-radius: 15px;
+    border-width: 0;
+    box-shadow: 1px 1px 5px rgb(30, 56, 133);
+    box-sizing: border-box; 
+    position: relative;
+}
+
+.search-bar-lieu, .search-bar-hebergement, .search-bar-personnes {
+    width: 100%;
+    font-size: 1em;
+    padding-block: 15px;
+    border-radius: 15px;
+    border: none;    
+    background-color: rgb(255, 255, 255, 0);
+    padding-left: min(12%);
+}
+.image-lieu, .image-hebergement, .image-personnes{   
+    width: auto;
+    position: absolute;
+    height: 50%;
+    left: 2%;
+    top: 25%;
+}
+
+.submit-button {
+    width: 100%;
+    padding-block: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(30, 56, 133, 0.9);
+    font-size: 1.1em;
+    color: rgb(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+    .container-top form {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .search-bar-lieu, .search-bar-hebergement, .search-bar-personnes {
+        width: 100%;   
+    }
+    .input-container-lieu, .input-container-hebergement, .input-container-personnes {
+        margin-block: 1%;
+    }
 }

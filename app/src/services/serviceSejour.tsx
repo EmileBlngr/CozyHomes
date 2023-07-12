@@ -3,17 +3,17 @@ import { AllBouchonSejourResume } from "./bouchons/bouchonSejourResume";
 
 const Bouchon = true;
 
-export const GetSejourResume = async (email: string, password: string) => {
+export const GetSejourResume = async () => {
     if (Bouchon) {
         const sejours: ISejourResume[] = await AllBouchonSejourResume();
         return Promise.resolve({
             status: 200,
             json: () => {
-                return Promise.resolve(sejours)
-            }
+                return Promise.resolve(sejours);
+            },
         });
       }
       else {
         return Promise.resolve('404');
       }
-    }
+    };

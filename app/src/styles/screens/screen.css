@@ -1,3 +1,5 @@
+
+
 .backgroundImage {
   position: absolute;
   top: 0px;
@@ -83,9 +85,8 @@ label {
   font-size: 0.8em;
   color: rgb(217, 24, 24);
   font-weight: 600;
-
-
 }
+
 @media (max-width: 768px) {
   .webContainer {
     /* Styles spécifiques à la version mobile */
