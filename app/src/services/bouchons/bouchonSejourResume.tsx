@@ -3,7 +3,7 @@ import ISejourResume from "../../interfaces/ISejourResume";
 export const AllBouchonSejourResume = (): ISejourResume[] => {
     return [
         {
-            intitule: 'Maison T5 avec vue sur la mer', 
+            intitule: 'Maison T5 avec vue sur la mer Maison T5 avec vue sur la mer Maison T5 avec vue sur la mer', 
             image: 'https://cf.bstatic.com/xdata/images/hotel/square600/448651003.webp?k=94a3aef2de15ab04199cac71a92b0b66f8468c7bf88bd6841d30ab048cbbaf85&o=',
             ville: 'Soulac-sur-mer', 
             codePostal: '33780',

@@ -4,7 +4,7 @@ import { handleChangeHebergement, handleChangeLieu, handleChangePersonnes } from
 import { GetSejourResume } from "../../services/serviceSejour";
 import ISejourResume from "../../interfaces/ISejourResume";
 import CardSejour from "../../components/cards/CardSejour";
-import { hebergementIcone, lieuIcone } from "../../assets/_export";
+import { hebergementIcone, lieuIcone, personnesIcone } from "../../assets/_export";
 
 function Accueil() {
     const [lieu, setLieu] = useState<string>(''); 
@@ -28,7 +28,7 @@ function Accueil() {
     return(
         <div className="container-global">
             <div className="container-top">
-                <h1>Trouvez le sejour de vos rêves</h1>
+                <h1>Trouvez le séjour de vos rêves</h1>
                 <form>
                     <div className="input-container-lieu">
                        <input 
@@ -71,7 +71,7 @@ function Accueil() {
                         className="search-bar-personnes">
                         </input>
                         <img 
-                            src={lieuIcone}
+                            src={personnesIcone}
                             alt={"icone emplacement"}
                             className="image-personnes"
                             /> 

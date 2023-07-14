@@ -19,8 +19,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-right: 2%;
-  }
-
+}
 .container-top form {
     width: 100%;
     padding-inline: 0;
@@ -47,7 +46,7 @@
     border-radius: 15px;
     border: none;    
     background-color: rgb(255, 255, 255, 0);
-    padding-left: min(12%);
+    padding-left: min(15%);
 }
 .image-lieu, .image-hebergement, .image-personnes{   
     width: auto;
@@ -68,7 +67,10 @@
     color: rgb(255, 255, 255, 0.9);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+    .container-global{
+        padding-right: 5%;
+    }
     .container-top form {
         flex-direction: column;
         width: 100%;
@@ -79,5 +81,17 @@
     }
     .input-container-lieu, .input-container-hebergement, .input-container-personnes {
         margin-block: 1%;
+        width: 99%;
+    }
+    .container-center {
+        overflow-y: visible;
+    }
+    .container-global {
+        overflow-y: scroll;
+    }
+}
+@media (max-width: 480px) {
+    .container-sejour {
+        flex-direction: column;
     }
 }
