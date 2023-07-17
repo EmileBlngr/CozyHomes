@@ -1,4 +1,4 @@
-import '../../styles/screens/connexion/Connexion.css'
+import '../../styles/screens/connexion/connexion.css'
 import React, { useState } from "react";
 import { eyeOpenIcon, eyeSlashIcon } from "../../assets/_export";
 import { Link } from "react-router-dom";

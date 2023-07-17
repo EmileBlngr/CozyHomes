@@ -2,6 +2,7 @@ import React from "react";
 import '../../styles/components/cards/CardSejour.css'
 import ISejourResume from "../../interfaces/ISejourResume";
 import { hebergementIcone, lieuIcone } from "../../assets/_export";
+import { useNavigation } from "../../factories/hooks/UseNavigation";
 
 interface Props {
     sejour: ISejourResume;
@@ -22,8 +23,9 @@ function CardSejour({ sejour }: Props) {
                 break;
         }
     }
+    const navigateTo = useNavigation();
     return(
-        <div className="container-card">
+        <div className="container-card" onClick={() => navigateTo('/sejour/detail/', { id: sejour.idSejour })}>
             <div className="container-image">
                 <img src={sejour.image} alt={'description hebergement'} className="image-card"></img>
             </div>
