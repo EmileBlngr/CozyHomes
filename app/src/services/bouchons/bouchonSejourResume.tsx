@@ -10,6 +10,7 @@ export const AllBouchonSejourResume = (): ISejourResume[] => {
             adresse: '1 Route de Grayan',
             typeHebergement: 'HOTEL', 
             prix: 380.56,
+            personnes: 5,
             detail: `Situé à Soulac-sur-Mer, l'Hôtel L'Arbousier propose un jardin, une terrasse, un restaurant et un bar. 
             Il se trouve à environ 1,5 km de la plage Sud et à 2,5 km de celle des Cantines. Cet établissement non-fumeurs se trouve à 1,3 km de la plage centrale. 
             Toutes les chambres comprennent une armoire. Les chambres de l'Hôtel L'Arbousier sont équipées d'une télévision à écran plat et d'articles de toilette gratuits.
@@ -25,6 +26,7 @@ export const AllBouchonSejourResume = (): ISejourResume[] => {
             adresse: '1 Route de Grayan',
             typeHebergement: 'HOTEL', 
             prix: 380.56,
+            personnes: 8,
             detail: `Situé à Soulac-sur-Mer, l'Hôtel L'Arbousier propose un jardin, une terrasse, un restaurant et un bar. 
             Il se trouve à environ 1,5 km de la plage Sud et à 2,5 km de celle des Cantines. Cet établissement non-fumeurs se trouve à 1,3 km de la plage centrale. 
             Toutes les chambres comprennent une armoire. Les chambres de l'Hôtel L'Arbousier sont équipées d'une télévision à écran plat et d'articles de toilette gratuits.
@@ -40,6 +42,7 @@ export const AllBouchonSejourResume = (): ISejourResume[] => {
             adresse: '1 Route de Grayan',
             typeHebergement: 'HOTEL', 
             prix: 380.56,
+            personnes: 1,
             detail: `Situé à Soulac-sur-Mer, l'Hôtel L'Arbousier propose un jardin, une terrasse, un restaurant et un bar. 
             Il se trouve à environ 1,5 km de la plage Sud et à 2,5 km de celle des Cantines. Cet établissement non-fumeurs se trouve à 1,3 km de la plage centrale. 
             Toutes les chambres comprennent une armoire. Les chambres de l'Hôtel L'Arbousier sont équipées d'une télévision à écran plat et d'articles de toilette gratuits.
@@ -55,6 +58,7 @@ export const AllBouchonSejourResume = (): ISejourResume[] => {
             adresse: '1 Route de Grayan',
             typeHebergement: 'HOTEL', 
             prix: 380.56,
+            personnes: 15,
             detail: `Situé à Soulac-sur-Mer, l'Hôtel L'Arbousier propose un jardin, une terrasse, un restaurant et un bar. 
             Il se trouve à environ 1,5 km de la plage Sud et à 2,5 km de celle des Cantines. Cet établissement non-fumeurs se trouve à 1,3 km de la plage centrale. 
             Toutes les chambres comprennent une armoire. Les chambres de l'Hôtel L'Arbousier sont équipées d'une télévision à écran plat et d'articles de toilette gratuits.
@@ -70,6 +74,7 @@ export const AllBouchonSejourResume = (): ISejourResume[] => {
             adresse: '1 Route de Grayan',
             typeHebergement: 'HOTEL',
             prix: 380.56, 
+            personnes: 4,
             detail: `Situé à Soulac-sur-Mer, l'Hôtel L'Arbousier propose un jardin, une terrasse, un restaurant et un bar. 
             Il se trouve à environ 1,5 km de la plage Sud et à 2,5 km de celle des Cantines. Cet établissement non-fumeurs se trouve à 1,3 km de la plage centrale. 
             Toutes les chambres comprennent une armoire. Les chambres de l'Hôtel L'Arbousier sont équipées d'une télévision à écran plat et d'articles de toilette gratuits.
@@ -85,6 +90,7 @@ export const AllBouchonSejourResume = (): ISejourResume[] => {
             adresse: '1 Route de Grayan',
             typeHebergement: 'HOTEL',
             prix: 380.56, 
+            personnes: 2,
             detail: `Situé à Soulac-sur-Mer, l'Hôtel L'Arbousier propose un jardin, une terrasse, un restaurant et un bar. 
             Il se trouve à environ 1,5 km de la plage Sud et à 2,5 km de celle des Cantines. Cet établissement non-fumeurs se trouve à 1,3 km de la plage centrale. 
             Toutes les chambres comprennent une armoire. Les chambres de l'Hôtel L'Arbousier sont équipées d'une télévision à écran plat et d'articles de toilette gratuits.

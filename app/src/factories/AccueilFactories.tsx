@@ -21,7 +21,14 @@ export const handleChangeHebergement =
         e: React.ChangeEvent<HTMLInputElement>, 
         setPersonnes: React.Dispatch<React.SetStateAction<number>>,
     ) => {
-        const value = parseInt(e.target.value, 10);
+        let value: number;
+        if (parseInt(e.target.value, 10) < 0) {
+            value = NaN; 
+        }
+        else {
+           value = parseInt(e.target.value, 10); 
+        }
+        
         setPersonnes(value);
     };
 //Schéma de validation des erreurs de formulaire

@@ -6,6 +6,7 @@ interface ISejourResume {
     adresse: string;
     typeHebergement: 'HOTEL' | 'MAISON' | 'APPARTEMENT';
     prix: number;
+    personnes: number;
     detail: string;
 }
 export default ISejourResume;

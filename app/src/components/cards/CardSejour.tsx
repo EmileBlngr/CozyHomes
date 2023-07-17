@@ -39,10 +39,10 @@ function CardSejour({ sejour }: Props) {
                             {sejour.ville}
                         </p>
                         <p>
-                            {sejour.adresse}
+                            {sejour.codePostal}
                         </p>
                         <p>
-                            {sejour.codePostal}
+                            {sejour.adresse}
                         </p>
                         <img 
                             src={lieuIcone}
@@ -57,7 +57,7 @@ function CardSejour({ sejour }: Props) {
                             {typeHebergement()}
                         </p>
                         <p>
-                            5 places
+                            {sejour.personnes} personnes
                         </p>
                         <p>
                             {sejour.prix}€ / nuit

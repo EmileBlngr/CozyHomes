@@ -11,20 +11,31 @@ function Accueil() {
     const [hebergement, setHebergement] = useState<string>(''); 
     const [personnes, setPersonnes] = useState<number>(); 
     const [listeSejours, setListeSejours] = useState<ISejourResume[]>();
+    const [listeSejoursFiltre, setListeSejoursFiltre] = useState<ISejourResume[]>();
+
     useEffect(() => {
         GetSejourResume()
         .then((reponse: any) => {
             if (reponse.status === 200) {
                 reponse.json().then(sejours => {
                   setListeSejours(sejours);
+                  setListeSejoursFiltre(sejours);
                 });
             }
         })              
         .catch(e => console.log('error: ' + JSON.stringify(e)));
     }, [])
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    const handleSubmit = () => {};
+    const handleSubmit = () => {    
+        const filteredSejours = listeSejours.filter((sejour) => {
+          const isLieuMatched = !lieu || sejour.ville.toLowerCase().includes(lieu.toLowerCase());
+          const isHebergementMatched = hebergement === 'TOUS' || !hebergement  || sejour.typeHebergement === hebergement;
+          const isPersonnesMatched = isNaN(personnes) || personnes === undefined || sejour.personnes === personnes;
+          return isLieuMatched && isHebergementMatched && isPersonnesMatched;
+        });
+        console.log(filteredSejours);
+        setListeSejoursFiltre(filteredSejours);
+      };
     return(
         <div className="container-global">
             <div className="container-top">
@@ -87,8 +98,8 @@ function Accueil() {
             </div>
             <div className="container-center">
                 <div className="container-sejour">
-                {listeSejours !== undefined
-                    ? listeSejours.map((sejour: ISejourResume, index) => (
+                {listeSejoursFiltre !== undefined
+                    ? listeSejoursFiltre.map((sejour: ISejourResume, index) => (                       
                     <CardSejour 
                         sejour={sejour}
                         key={index} />
