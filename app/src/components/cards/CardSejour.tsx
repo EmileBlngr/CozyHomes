@@ -26,7 +26,7 @@ function CardSejour({ sejour }: Props) {
     const navigateTo = useNavigation();
     return(
         <div className="container-card" onClick={() => navigateTo('/sejour/detail/', { id: sejour.idSejour })}>
-            <div className="container-image">
+            <div className="container-image-card">
                 <img src={sejour.image} alt={'description hebergement'} className="image-card"></img>
             </div>
             <div className="container-card-content">

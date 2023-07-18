@@ -6,3 +6,4 @@ export {default as eyeSlashIcon}  from './img/eyeSlashIcon.png';
 export {default as lieuIcone}  from './img/lieuIcone.png';
 export {default as hebergementIcone}  from './img/hebergementIcone.png';
 export {default as personnesIcone}  from './img/personnesIcone.png';
+export {default as star}  from './img/star.png';

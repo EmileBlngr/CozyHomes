@@ -1,33 +1,33 @@
-.container-global {
+.container-global-accueil {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-.container-top {
+.container-top-accueil {
     flex: 1;
     justify-content: space-between;
 }
-.container-center {
+.container-center-accueil {
     flex: 3;
     margin-top: 2%;
     overflow-y: scroll;
 }
-.container-sejour {
+.container-sejour-accueil {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     padding-right: 2%;
 }
-.container-top form {
+.container-top-accueil form {
     width: 100%;
     padding-inline: 0;
     display: flex;
     flex-direction: row;
     padding-top: 0;
 }
-.input-container-lieu, .input-container-hebergement, .input-container-personnes, .container-button {
+.input-container-lieu, .input-container-hebergement, .input-container-personnes, .container-button-accueil {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -48,7 +48,7 @@
     background-color: rgb(255, 255, 255, 0);
     padding-left: min(15%);
 }
-.image-lieu, .image-hebergement, .image-personnes{   
+.image-lieu-accueil, .image-hebergement-accueil, .image-personnes-accueil{   
     width: auto;
     position: absolute;
     height: 50%;
@@ -56,7 +56,7 @@
     top: 25%;
 }
 
-.submit-button {
+.submit-button-accueil {
     width: 100%;
     padding-block: 15px;
     font-weight: bold;
@@ -68,10 +68,11 @@
 }
 
 @media (max-width: 1080px) {
-    .container-global{
+    .container-global-accueil{
         padding-right: 5%;
+        overflow-y: scroll;
     }
-    .container-top form {
+    .container-top-accueil form {
         flex-direction: column;
         width: 100%;
         padding: 0;
@@ -83,15 +84,12 @@
         margin-block: 1%;
         width: 99%;
     }
-    .container-center {
+    .container-center-accueil {
         overflow-y: visible;
-    }
-    .container-global {
-        overflow-y: scroll;
     }
 }
 @media (max-width: 480px) {
-    .container-sejour {
+    .container-sejour-accueil {
         flex-direction: column;
     }
 }

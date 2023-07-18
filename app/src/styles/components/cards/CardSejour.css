@@ -86,7 +86,7 @@
 }
 @media (max-width: 480px) {
     .container-card {
-        height: 200px;
+        height: 210px;
         max-height: none;
         overflow-x: hidden;
     }
@@ -94,7 +94,7 @@
         flex: 2;
         width: 50%
     }
-    .container-image {
+    .container-image-card {
         flex: 1;
         min-width: 100px;
     }

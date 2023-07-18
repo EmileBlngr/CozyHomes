@@ -3,6 +3,7 @@ import '../../styles/screens/sejour/detail.css'
 import { GetSejourDetail } from "../../services/serviceSejour";
 import { useLocation } from "react-router-dom";
 import ISejourDetail from "../../interfaces/ISejourDetail";
+import NoteSejour from "../../components/NoteSejour";
 
 function DetailSejour() {
     const location = useLocation();
@@ -22,13 +23,28 @@ function DetailSejour() {
     }, [])
     if (sejourDetail !== undefined) {
        return(
-        <div className="container-global">
-            <div className="container-top">
-                <h1>{sejourDetail.intitule}</h1>
-                
+        <div className="container-global-detail">
+            <div className="container-top-detail">
+                   <h1>{sejourDetail.intitule}</h1>          
             </div>
-            <div className="container-center">
-                
+            <div className="container-center-detail">
+                <div className="container-left-detail">
+                    <div className="container-left-top-detail">
+                        <div className="container-note-detail">
+                            <NoteSejour note={sejourDetail.note}/>
+                        </div>  
+                        <div className="container-image-detail">
+                            <img src={sejourDetail.image} alt={'description hebergement'} className="image-principale"></img>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        
+                    </div>
+                </div>
+                <div className="container-right-detail">
+                    <p className="detail-texte">{sejourDetail.detail}</p>
+                </div>
             </div>
         </div>
 

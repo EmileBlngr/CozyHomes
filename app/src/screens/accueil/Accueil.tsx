@@ -37,8 +37,8 @@ function Accueil() {
         setListeSejoursFiltre(filteredSejours);
       };
     return(
-        <div className="container-global">
-            <div className="container-top">
+        <div className="container-global-accueil">
+            <div className="container-top-accueil">
                 <h1>Trouvez le séjour de vos rêves</h1>
                 <form>
                     <div className="input-container-lieu">
@@ -53,7 +53,7 @@ function Accueil() {
                         <img 
                             src={lieuIcone}
                             alt={"icone emplacement"}
-                            className="image-lieu"
+                            className="image-lieu-accueil"
                             />
                     </div>
                     <div className="input-container-hebergement">
@@ -69,7 +69,7 @@ function Accueil() {
                         <img 
                             src={hebergementIcone}
                             alt={"icone hebergement"}
-                            className="image-hebergement"
+                            className="image-hebergement-accueil"
                             />
                     </div>
                     <div className="input-container-personnes">
@@ -84,20 +84,20 @@ function Accueil() {
                         <img 
                             src={personnesIcone}
                             alt={"icone emplacement"}
-                            className="image-personnes"
+                            className="image-personnes-accueil"
                             /> 
                     </div>
-                    <div className="container-button">
+                    <div className="container-button-accueil">
                         <input 
                             type="button" 
-                            className="submit-button" 
+                            className="submit-button-accueil" 
                             value="Rechercher"
                             onClick={handleSubmit}/>
                     </div>   
                 </form>
             </div>
-            <div className="container-center">
-                <div className="container-sejour">
+            <div className="container-center-accueil">
+                <div className="container-sejour-accueil">
                 {listeSejoursFiltre !== undefined
                     ? listeSejoursFiltre.map((sejour: ISejourResume, index) => (                       
                     <CardSejour 

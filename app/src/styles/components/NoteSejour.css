@@ -1,0 +1,37 @@
+.container-global-note {
+    padding-inline: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 56, 133);
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    width: 30%;
+}
+.container-global-note h3 {
+    color: rgba(255, 255, 255);
+    text-align: center;
+}
+.image-etoile-note {
+    position: absolute;
+    top: 28%;
+    right: -50%;
+    width: 30px;
+    height: 30px;
+}
+.container-top-note {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.bottom-note {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255);
+    text-align: center;
+}
+.container-bottom-note {
+    padding-bottom: 10px;
+}
+
