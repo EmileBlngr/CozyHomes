@@ -1,0 +1,111 @@
+
+
+.backgroundImage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/img/background_image.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+.globalContainer {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.containerHeader {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+  }
+
+.webContainer {
+  width: 85%;
+  height: 77%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 0.5%;
+  padding-bottom: 3%;
+  border-radius: 15px;
+  max-width: 100%;
+  justify-content: flex-start;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: rgb(30, 56, 133) ;
+  margin-top: 2%;
+}
+
+.webContainerConnexion {
+  width: 28%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-block: 1%;
+  border-radius: 8px;
+  height: 70%;
+  max-width: 100%;
+  justify-content: flex-start;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 4%;
+}
+
+/* GlobalStyles */
+/* Bouton survol souris */
+button:hover, input[type='button']:hover, a:hover {
+  opacity: 0.7;
+}
+/* Bouton au click */
+button:active, input[type='button']:active, a:active {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+/* Titre 1 */
+ h1 { 
+  font-size: 2em;
+  text-align: center;
+  color: rgb(30, 56, 133);
+}
+/* Labels de formulaire */
+label {
+  font-size: 1.05em;
+  font-weight: 600;
+}
+/* erreur de formulaire */
+.globalFormError {
+  font-size: 0.8em;
+  color: rgb(217, 24, 24);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .webContainer {
+    /* Styles spécifiques à la version mobile */
+    width: 90%;
+    padding: 0%;
+    padding-inline: 5%;
+    padding-top: 2%;
+    border-radius: 0;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0;
+    flex: 1;
+  }
+  .webContainerConnexion {
+    width: 90%;
+    height: 100%;
+    padding-inline: 5%;
+    border-radius: 0;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
